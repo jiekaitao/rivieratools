@@ -93,22 +93,22 @@ body {
 <!-- @NOTE: the onclicks are used for touch devices since I'm lazy and didnt use <a> tags -->
     <div class="Menu">
         <ul class="Menu-list" data-offset="10">
-          <li class="Menu-list-item" data-offset="20" onclick>
+          <li class="Menu-list-item" data-offset="20" onclick="home1()">
             Home
             <span class="Mask"><span>Home</span></span>
             <span class="Mask"><span>Home</span></span>
           </li>
-          <li class="Menu-list-item" data-offset="16" onclick>
+          <li class="Menu-list-item" data-offset="16" onclick="home2()">
             About
             <span class="Mask"><span>About</span></span>
             <span class="Mask"><span>About</span></span>
           </li>
-          <li class="Menu-list-item" data-offset="12" onclick>
+          <li class="Menu-list-item" data-offset="12" onclick="home3()">
             Work
-            <span class="Mask"><span>Work</span></span>
-            <span class="Mask"><span>Work</span></span>
+            <span class="Mask"><span>Schedules</span></span>
+            <span class="Mask"><span>Schedules</span></span>
           </li>
-          <li class="Menu-list-item" data-offset="8" onclick>
+          <li class="Menu-list-item" data-offset="8" onclick="home4()">
             Contact
             <span class="Mask"><span>Contact</span></span>
             <span class="Mask"><span>Contact</span></span>
@@ -117,7 +117,42 @@ body {
       </div>
 </html>
 <script>
-        var $menu = $('.Menu-list'),
+
+
+
+
+
+function home1() {
+    var result = str.link("https://riviera.today");
+  }
+  function home2() {
+    var result = str.link("https://riviera.today/note");
+  }
+  function home3() {
+    var result = str.link("https://cmdbook.com");
+  }
+  function home4() {
+    var result = str.link("https://cmdbook.com/contact");
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var $menu = $('.Menu-list'),
 $item = $('.Menu-list-item'),
 w = $(window).width(), //window width
 h = $(window).height(); //window height
