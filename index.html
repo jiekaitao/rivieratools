@@ -2,6 +2,14 @@
 
 
 <head>
+  <title>
+    Riviera Tools
+  </title>
+  <meta charset="UTF-8">
+  <meta name="description" content="A mystical portal that leads wanderers to answers.">
+  <meta name="keywords" content="HTML,CSS,PHP,JavaScript">
+  <meta name="author" content="Jack Tao">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <!-- CSS here -->
 	  <link rel="stylesheet" href="css/bootstrap.min.css">
 	  <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -104,26 +112,32 @@ body {
 <!-- @NOTE: the onclicks are used for touch devices since I'm lazy and didnt use <a> tags -->
 	<div class="Menu">
 		<ul class="Menu-list" data-offset="10">
-		  <li class="Menu-list-item" data-offset="20" onclick="home1()">>
-			Home
-			<span class="Mask"><span>Home</span></span>
-			<span class="Mask"><span>Home</span></span>
-		  </li>
+		  <li class="Menu-list-item" data-offset="80" onclick="home1()" style="position: relative; margin-left: 30px;">
+			Bell Countdown
+			<span class="Mask"><span> Bell Countdown</span></span>
+			<span class="Mask"><span> Bell Countdown</span></span>
+      </li>
+      <br>
 		  <li class="Menu-list-item" data-offset="16" onclick="home2()">
-			About
-			<span class="Mask"><span>About</span></span>
-			<span class="Mask"><span>About</span></span>
+			Riviera Digital
+			<span class="Mask"><span>Riviera Digital</span></span>
+			<span class="Mask"><span>Riviera Digital</span></span>
 		  </li>
 		  <li class="Menu-list-item" data-offset="12" onclick="home3()">
-			Work
-			<span class="Mask"><span>Work</span></span>
-			<span class="Mask"><span>Work</span></span>
+        Riviera Today
+			<span class="Mask"><span>Riviera Today</span></span>
+			<span class="Mask"><span>Riviera Today</span></span>
 		  </li>
 		  <li class="Menu-list-item" data-offset="8" onclick="home4()">
-			Contact
-			<span class="Mask"><span>About</span></span>
-			<span class="Mask"><span>About</span></span>
-		  </li>
+			Keen Class
+			<span class="Mask"><span>Keen Class</span></span>
+			<span class="Mask"><span>Keen Class</span></span>
+      </li>
+      <li class="Menu-list-item" data-offset="4" onclick="home4()">
+        About
+        <span class="Mask"><span>About</span></span>
+        <span class="Mask"><span>About</span></span>
+        </li>
 		</ul>
 	  </div>
 </center>
@@ -196,16 +210,20 @@ $(window).on('mousemove', function(e) {
 
 
 function home1() {
-    var result = str.link("https://riviera.today");
+  window.location.replace("https://bell.ninja");
+    
   }
   function home2() {
-    var result = str.link("https://riviera.today/note");
+    window.location.replace("http://riviera.digital");
   }
   function home3() {
-    var result = str.link("https://cmdbook.com");
+    window.location.replace("https://riviera.today");
   }
   function home4() {
-    var result = str.link("https://cmdbook.com/contact");
+    window.location.replace("https://keenclass.com");
+  }
+  function home5() {
+    window.location.replace("https://riviera.tools/about.html");
   }
 
 
