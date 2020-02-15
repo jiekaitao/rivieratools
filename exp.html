@@ -96,11 +96,312 @@ body {
 .Menu-list-item:hover::before, .Menu-list-item:active::before {
   transform: scale(1);
 }
+.snote{
+max-width:150%;
+max-height:150%;
+}
 
-	</style>
+.snote h2,p{
+  font-size:80%;
+  font-weight:normal;
+}
+
+.snote ul,li{
+  list-style:none;
+}
+
+.snote ul{
+  overflow:hidden;
+  padding:3em;
+}
+
+.snote ul li a{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:15em;
+  width:12em;
+  padding:1em;
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+   box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -webkit-transform:rotate(-6deg);
+  -o-transform:rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+
+.snote ul li:nth-child(even) a{
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+   position:relative;
+  top:5px;
+  background:#cfc;
+}
+
+.snote ul li:nth-child(3n) a{
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#ccf;
+}
+
+.snote ul li:nth-child(5n) a{
+  -o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+  background:#fcf;
+}
+
+.snote ul li a:hover,ul li a:focus{
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+
+.snote ul li{
+  margin:1em;
+  float:left;
+}
+
+.snote ul li h2{
+  font-size:140%;
+  font-weight:bold;
+  padding-bottom:0px;
+  font-family:Oswald;
+  text-align:center;
+  color:#000;
+}
+
+.snote ul li p{
+  font-family:'Shadows Into Light Two',arial,sans-serif;
+  font-size:120%;
+  color:#000;
+}
+
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 8px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+        body {
+            text-align: center;
+            background: #00ECB9;
+            font-family: sans-serif;
+            font-weight: 100;
+        }
+
+        h1 {
+            color: #396;
+            font-weight: 100;
+            font-size: 40px;
+            margin: 40px 0px 20px;
+        }
+
+        #clockdiv {
+            font-family: sans-serif;
+            color: #fff;
+            display: inline-block;
+            font-weight: 100;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #clockdiv>div {
+            padding: 10px;
+            border-radius: 3px;
+            background: #00BF96;
+            display: inline-block;
+        }
+
+        #clockdiv div>span {
+            padding: 15px;
+            border-radius: 3px;
+            background: #00816A;
+            display: inline-block;
+        }
+
+        .smalltext {
+            padding-top: 5px;
+            font-size: 16px;
+        }
+  </style>
+    <meta http-equiv="refresh" content="30">
 <body>
 <center>
 <!-- @NOTE: the onclicks are used for touch devices since I'm lazy and didnt use <a> tags -->
+  <div id="clockdiv">
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">Days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">Hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">Minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">Seconds</div>
+    </div>
+</div>
 	<div class="Menu">
 		<ul class="Menu-list" data-offset="10">
 		  <li class="Menu-list-item" data-offset="20" onclick="home1()">>
@@ -108,17 +409,17 @@ body {
 			<span class="Mask"><span>Home</span></span>
 			<span class="Mask"><span>Home</span></span>
 		  </li>
-		  <li class="Menu-list-item" data-offset="16" onclick="home1()">
+		  <li class="Menu-list-item" data-offset="16" onclick="home2()">
 			About
 			<span class="Mask"><span>About</span></span>
 			<span class="Mask"><span>About</span></span>
 		  </li>
-		  <li class="Menu-list-item" data-offset="12" onclick="home1()">
+		  <li class="Menu-list-item" data-offset="12" onclick="home3()">
 			Work
 			<span class="Mask"><span>Work</span></span>
 			<span class="Mask"><span>Work</span></span>
 		  </li>
-		  <li class="Menu-list-item" data-offset="8" onclick="home1()">
+		  <li class="Menu-list-item" data-offset="8" onclick="home4()">
 			Contact
 			<span class="Mask"><span>Contact</span></span>
 			<span class="Mask"><span>Contact</span></span>
@@ -257,4 +558,191 @@ var $this = $(this),
 $this.css('transform', transformLayer);
 });
 });
+
+setInterval(function () {
+        window.location.reload();
+    }, 300000);
+    function myFunction2() {
+        d = new Date();
+        weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        var n = weekday[d.getDay()];
+        document.getElementById("demo").innerHTML = n;
+    }
+
+
+    getsch();
+
+
+
+    //set the target countdown time
+    function getsch() {
+
+
+        //get current minute, seconds, and hours
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+        var cminute = today.getMinutes();
+        var chour = today.getHours();
+        var csecond = today.getSeconds();
+
+
+        //divide current minute by sixty (an hour)* and combine strings for hour + minute product*
+        // new Date() and today are commensurated. ACtually, division is not necessary if the string (x.x) is accepted.
+        var minute = cminute
+        var timex = chour + "." + cminute;
+
+        /////
+
+        //var timex = new Date().getHours();
+        if (timex >= 1.00 && timex < 8.00) {
+            period = "Good Morning! School Starts in..."
+            var timel = "8:00:00";
+        } else if (timex >= 8 && timex <= 8.45) {
+            period = "Period 1"
+            var timel = "8:45:00";
+        } else if (timex >= 8.50 && timex <= 9.40) {
+            period = "Period 2"
+            var timel = "9:40:00";
+        } else if (timex >= 9.40 && timex < 9.55) {
+            period = "Break Time"
+            var timel = "9:55:00";
+        } else if (timex >= 9.55 && timex <= 10.40) {
+            period = "Period 3"
+            var timel = "10:40:00";
+        } else if (timex >= 10.45 && timex <= 11.30) {
+            period = "Period 4"
+            var timel = "11:30:00";
+        } else if (timex >= 11.35 && timex <= 12.20) {
+            period = "Period 5"
+            var timel = "12:20:00";
+        } else if (timex >= 12.20 && timex <= 13.05) {
+            period = "Period 6"
+            var timel = "13:05:00";
+        } else if (timex >= 13.10 && timex <= 13.55) {
+            period = "Period 7"
+            var timel = "13:55:00";
+        } else if (timex >= 14.00 && timex <= 14.40) {
+            period = "Period 8"
+            var timel = "14:45:00";
+        } else if (timex >= 14.45 && timex <= 15.15) {
+            period = "Tutorial"
+            var timel = "15:15:00";
+        } else if (timex >= 15.15 && timex <= 17.00) {
+            period = "Have a great rest of your day! Library Closes in"
+            var timel = "17:00:00";
+        } else {
+            period = "Have a great rest of your day!"
+            var timel = "24:00:00";
+        }
+        document.getElementById("demo").innerHTML = period;
+        document.getElementById("demo2").innerHTML = timex;
+        ////////////////
+        //var timel = "15:20:00";
+        ////////////////
+
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = mm + ' ' + dd + ', ' + yyyy + ' ';
+        var countDownDate = new Date(today + " " + timel).getTime();
+        // Set the date we're counting down to
+        //var countDownDate = new Date(today + " 14:35:20").getTime();
+        var x = setInterval;
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+        temphour = hours * 60;
+        combinedvar = minutes + temphour;
+        tempmath = combinedvar * 60;
+        nonseconds = temphour + tempmath;
+        finalseconds = seconds + nonseconds;
+        window.x = finalseconds;
+    };
+
+
+
+    /////////////////// Visuals preperation
+
+
+
+
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
+    }
+
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id);
+        var daysSpan = clock.querySelector('.days');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = clock.querySelector('.seconds');
+
+        function updateClock() {
+            var t = getTimeRemaining(endtime);
+
+            daysSpan.innerHTML = t.days;
+            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+            if (t.total <= 0) {
+                clearInterval(timeinterval);
+                getsch();
+            }
+        }
+        getsch();
+        checknull();
+        updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    if (x <= 15) {
+        document.getElementById("seconds").style.color = 'red';
+
+    }
+    // Last number is mili seconds
+    var deadline = new Date(Date.parse(new Date()) + 1 * 1 * 1 * x * 1000);
+    initializeClock('clockdiv', deadline);
+
+    function checknull() {
+        if (deadline == 0) {
+            getsch();
+            Program.restart();
+            window.location.reload();
+        };
+
+    };
         </script>
